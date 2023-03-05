@@ -1,0 +1,1 @@
+This bear is <%= name %>; he is <%= age %> years old.
