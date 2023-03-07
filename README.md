@@ -76,4 +76,4 @@ await archetype.reify({
 
 ## Further references
 
-- [create-marp-slides](https://github.com/giancosta86/create-marp-slides) - dedicated to the creation of Marp-based projects with _detached Sass stylesheets_ and _dedicated lifecycle scripts_. It represents the very starting point of Platonic.
+- [create-marp-slides](https://github.com/giancosta86/create-marp-slides) - dedicated to the creation of Marp-based projects with _detached Sass stylesheets_ and _dedicated lifecycle scripts_, including a very effective **watch** feature

@@ -1,6 +1,6 @@
 {
   "name": "@giancosta86/platonic",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0",
   "description": "General-purpose archetype directory reification",
   "keywords": [
     "archetype",
