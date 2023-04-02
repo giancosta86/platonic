@@ -79,6 +79,13 @@ describe("Archetype", () => {
         );
       });
 
+      it("should copy .gitignore files", async () => {
+        await testReification.expectTargetText(
+          ".gitignore",
+          "/<X>\n/<Y>\n/<Z>"
+        );
+      });
+
       it("should copy regular files from a directory", async () => {
         await testReification.expectTargetText(
           join("gamma", "delta.txt"),
