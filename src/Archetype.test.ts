@@ -30,7 +30,7 @@ describe("Archetype", () => {
       });
     });
 
-    describe("when copying the static files", () => {
+    describe("after copying the static files", () => {
       it("should copy top-level regular files", async () => {
         await expect(join(tempDirectory, "alpha.txt")).toBeTextFile("Alpha");
         await expect(join(tempDirectory, "beta.md")).toBeTextFile(
@@ -69,7 +69,7 @@ describe("Archetype", () => {
         ));
     });
 
-    describe("when injecting metadata into templates", () => {
+    describe("after injecting metadata into templates", () => {
       it("should inject into top-level regular files", async () => {
         await expect(join(tempDirectory, "omicron.txt")).toBeTextFile(
           `Hello, ${testMetadata.name}!`
@@ -203,7 +203,7 @@ describe("Archetype", () => {
 
     it("should work", () =>
       expect(join(tempDirectory, "justTemplate.txt")).toBeTextFile(
-        "This bear is Yogi; he is 36 years old."
+        `This bear is ${testMetadata.name}; he is ${testMetadata.age} years old.`
       ));
   });
 
