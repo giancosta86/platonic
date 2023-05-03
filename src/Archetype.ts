@@ -40,7 +40,7 @@ export class Archetype<TMetadata extends Data> {
     metadata,
     encoding
   }: ReificationSettings<TMetadata>): Promise<void> {
-    await this.verifySourceDirectory();
+    await this.checkSourceDirectory();
 
     await this.ensureTargetDirectory(targetDirectory);
 
@@ -54,7 +54,7 @@ export class Archetype<TMetadata extends Data> {
     ]);
   }
 
-  private async verifySourceDirectory(): Promise<void> {
+  private async checkSourceDirectory(): Promise<void> {
     try {
       await access(this.sourceDirectory);
     } catch {
