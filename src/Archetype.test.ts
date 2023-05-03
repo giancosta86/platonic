@@ -18,12 +18,7 @@ describe("Archetype", () => {
     const tempDirectory = useVolatileTempDirectory({ shared: true });
 
     beforeAll(async () => {
-      const sourceDirectory = join(
-        getSourceDirectory(),
-        "..",
-        "test",
-        "archetype"
-      );
+      const sourceDirectory = join(getSourceDirectory(), "test", "archetype");
 
       const archetype = new Archetype({
         sourceDirectory
@@ -126,7 +121,7 @@ describe("Archetype", () => {
       existingTemplateFilePath = join(tempDirectory, "omicron.txt");
       await writeFile(existingTemplateFilePath, uuid4());
 
-      const sourceDirectory = join(__dirname, "..", "test", "archetype");
+      const sourceDirectory = join(getSourceDirectory(), "test", "archetype");
 
       const archetype = new Archetype({ sourceDirectory });
 
@@ -170,8 +165,7 @@ describe("Archetype", () => {
       await writeFile(existingTemplateFilePath, uuid4());
 
       const sourceDirectory = join(
-        __dirname,
-        "..",
+        getSourceDirectory(),
         "test",
         "staticOnlyArchetype"
       );
@@ -194,8 +188,7 @@ describe("Archetype", () => {
 
     beforeAll(async () => {
       const sourceDirectory = join(
-        __dirname,
-        "..",
+        getSourceDirectory(),
         "test",
         "templateOnlyArchetype"
       );
