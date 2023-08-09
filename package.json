@@ -35,9 +35,8 @@
     "test:coverage": "yarn test --coverage",
     "build": "yarn compile-ts",
     "compile-ts": "tsc",
-    "prepack": "yarn check-all && yarn build && yarn test:prod",
-    "watch": "yarn compile-ts --watch",
-    "test:prod": "jest dist --testPathIgnorePatterns=/_.+"
+    "prepack": "yarn check-all && yarn build",
+    "watch": "yarn compile-ts --watch"
   },
   "dependencies": {
     "ejs": "^3.1.8",
@@ -46,8 +45,7 @@
     "recursive-copy": "^2.0.14"
   },
   "devDependencies": {
-    "@giancosta86/more-jest": "^1.0.0",
-    "@giancosta86/more-jest-io": "^1.1.0",
+    "@giancosta86/more-jest-io": "^2.0.1",
     "@swc/core": "^1.3.56",
     "@swc/jest": "^0.2.26",
     "@types/ejs": "^3.1.2",
