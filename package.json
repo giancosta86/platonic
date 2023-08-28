@@ -35,7 +35,8 @@
     "test:coverage": "yarn test --coverage",
     "build": "yarn compile-ts",
     "compile-ts": "tsc",
-    "prepack": "yarn check-all && yarn build",
+    "prepack": "yarn check-all && yarn build && yarn prune-dist",
+    "prune-dist": "rimraf -g 'dist/test/' 'dist/**/*.test.*'",
     "watch": "yarn compile-ts --watch"
   },
   "dependencies": {
@@ -51,7 +52,7 @@
     "@types/ejs": "^3.1.2",
     "@types/glob": "^8.0.1",
     "@types/jest": "^29.5.1",
-    "@types/node": "^16",
+    "@types/node": "^18",
     "@types/uuid": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^5.59.2",
@@ -64,7 +65,7 @@
     "uuid": "^9.0.0"
   },
   "engines": {
-    "node": ">=16.19.0"
+    "node": ">=18.17.1"
   },
   "publishConfig": {
     "access": "public"
